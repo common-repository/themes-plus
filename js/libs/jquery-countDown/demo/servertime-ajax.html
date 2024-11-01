@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jCountdown - jQuery Countdown Plugin Demos</title>
+	<link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap-theme.min.css">
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="../dist/jquery.jcountdown.js"></script>
+	<script src="js/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="x-template" id="template">
+
+		<div class="year-timer timer-section">
+			<span class="time">%y</span> : <span>%ty</span>
+		</div>
+		<div class="month-timer timer-section">
+			<span class="time">%m</span> : <span>%tm</span>
+		</div>
+		<div class="day-timer timer-section">
+			<span class="time">%d</span> <span>%td</span>
+		</div>
+		<div class="hour-timer timer-section">
+			<span class="time">%h</span> : <span>%th</span>
+		</div>
+		<div class="min-timer timer-section">
+			<span class="time">%i</span> : <span>%ti</span>
+		</div>
+		<div class="second-timer timer-section">
+			<span class="time">%s</span> : <span>%ts</span>
+		</div>
+
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			var dateTo = "January 25, 2017 12:00:00",
+					get_server_time = function() {
+						var time = null;
+						$.ajax({url: 'get_serverdate.php',
+							data : {
+								date: dateTo
+							},
+							async: false,
+							dataType: 'json',
+							success: function( date, status, xhr ) {
+								time = date;
+							},
+							error: function(xhr, status, err) {
+								time = new Date();
+								time = time.getTime();
+							}
+						});
+						return time;
+					},
+					time = get_server_time();
+
+			$("#timer").countdown({
+				date: dateTo,
+				serverDiff: time,
+				yearsAndMonths: true,
+				template: $('#template').html()
+			});
+
+		});
+	</script>
+	<style>
+		#timer {
+			margin: 20px auto;
+		}
+		.timer-section {
+			display: inline-block;
+		}
+		.timer-section span {
+			background-color: #ffffff;
+			padding: 5px 4px;
+			border-radius: 5px;
+		}
+		.time {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="jumbotron">
+
+			<h1 class="text-center">jCountdown</h1>
+
+			<p>Server Time AJAX Demo</p>
+
+
+			<p>
+				This demo shows you how to get the countdown timer to match the server time by passing the
+				difference of server time to the plugin.
+			</p>
+
+			<div id="timer" class="text-center"></div>
+
+		</div>
+
+
+
+
+		<h2>Setup</h2>
+
+		<p>Setup is as simple as doing the following:</p>
+
+<pre>
+//HTML
+
+&lt;p id="timer"&gt;&lt;/p&gt;
+</pre>
+
+			<p>
+			Create php file to return time server time:
+			</p>
+
+<pre>
+&lt;?php
+
+// get_servertime.php
+
+date_default_timezone_set('Europe/London');
+
+header("Cache-Control: no-cache, must-revalidate"); // HTTP/1.1
+header("Expires: Fri, 1 Jan 2010 00:00:00 GMT"); // Date in the past
+$now = time() * 1000;
+
+$end = strtotime( $_GET['date'] ) * 1000;
+
+# We only need the difference in dates
+echo $end - $now;
+?&gt;
+</pre>
+
+
+<pre>
+
+// JavaScript
+
+var dateTo = "January 25, 2016 12:00:00",
+	get_server_time = function() {
+	    var time = null;
+		$.ajax({
+			url: 'get_serverdate.php',
+			data : {
+				date: dateTo
+			},
+			async: false,
+			dataType: 'json',
+			success: function( date, status, xhr ) {
+				time = date;
+			},
+			error: function(xhr, status, err) {
+				time = new Date();
+				time = time.getTime();
+			}
+		});
+		return time;
+	},
+	time = get_server_time();
+
+$("#time").countdown({
+	date: dateTo,
+	serverDiff: time,
+	yearsAndMonths: true
+});
+</pre>
+
+
+	</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jCountdown - jQuery Countdown Plugin Demos</title>
+    <link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap-theme.min.css">
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="../dist/jquery.jcountdown.js"></script>
+    <script src="js/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="x-template" id="template">
+
+        <div class="year-timer timer-section">
+            <span class="time">%y</span> : <span>%ty</span>
+        </div>
+        <div class="month-timer timer-section">
+            <span class="time">%m</span> : <span>%tm</span>
+        </div>
+        <div class="day-timer timer-section">
+            <span class="time">%d</span> <span>%td</span>
+        </div>
+        <div class="hour-timer timer-section">
+            <span class="time">%h</span> : <span>%th</span>
+        </div>
+        <div class="min-timer timer-section">
+            <span class="time">%i</span> : <span>%ti</span>
+        </div>
+        <div class="second-timer timer-section">
+            <span class="time">%s</span> : <span>%ts</span>
+        </div>
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $(".timers").countdown({
+                dataAttr: "cdate",
+                yearsAndMonths: true,
+                template: $('#template').html()
+            });
+
+        });
+    </script>
+    <style>
+        .timers {
+            margin: 20px auto;
+        }
+        .timer-section {
+            display: inline-block;
+        }
+        .timer-section span {
+            background-color: #ffffff;
+            padding: 5px 4px;
+            border-radius: 5px;
+        }
+        .time {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron">
+
+                <h1 class="text-center">jCountdown</h1>
+
+                <p>Multiple Instances Demo</p>
+
+
+                <div data-cdate="december 28, 2016 00:00" class="timers text-center"></div>
+
+                <div data-cdate="january 6, 2017 08:00" class="timers text-center"></div>
+
+                <div data-cdate="february 30, 2018 16:00" class="timers text-center"></div>
+
+                <div data-cdate="december 28, 2019 00:00" class="timers text-center"></div>
+
+            </div>
+
+
+            <h2>Setup</h2>
+
+            <p>
+                Simply add a date to each element using the HTML5 data-* attribute:
+            </p>
+
+<pre>
+
+&lt;div data-cdate="december 28, 2016 00:00" class="timers"&gt;&lt;/div&gt;
+
+&lt;div data-cdate="january 6, 2017 08:00" class="timers"&gt;&lt;/div&gt;
+
+&lt;div data-cdate="february 30, 2018 16:00" class="timers"&gt;&lt;/div&gt;
+
+&lt;div data-cdate="december 28, 2019 00:00" class="timers"&gt;&lt;/div&gt;
+
+</pre>
+
+            <p>
+                Then pass the data name to the plugin:
+            </p>
+
+<pre>
+$(".timers").countdown({
+	dataAttr: "cdate"
+});
+</pre>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jCountdown - jQuery Countdown Plugin Demos</title>
+	<link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="js/bootstrap/dist/css/bootstrap-theme.min.css">
+
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="../dist/jquery.jcountdown.js"></script>
+	<script src="js/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="x-template" id="template">
+
+		<div class="year-timer timer-section">
+			<span class="time">%y</span> : <span>%ty</span>
+		</div>
+		<div class="month-timer timer-section">
+			<span class="time">%m</span> : <span>%tm</span>
+		</div>
+		<div class="day-timer timer-section">
+			<span class="time">%d</span> <span>%td</span>
+		</div>
+		<div class="hour-timer timer-section">
+			<span class="time">%h</span> : <span>%th</span>
+		</div>
+		<div class="min-timer timer-section">
+			<span class="time">%i</span> : <span>%ti</span>
+		</div>
+		<div class="second-timer timer-section">
+			<span class="time">%s</span> : <span>%ts</span>
+		</div>
+
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			var dateTo = "January 25, 2017 12:00:00";
+
+			$("#timer").countdown({
+				date: dateTo,
+				offset: -8,
+				yearsAndMonths: true,
+				template: $('#template').html()
+			});
+
+		});
+	</script>
+	<style>
+		#timer {
+			margin: 20px auto;
+		}
+		.timer-section {
+			display: inline-block;
+		}
+		.timer-section span {
+			background-color: #ffffff;
+			padding: 5px 4px;
+			border-radius: 5px;
+		}
+		.time {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+<div class="container">
+	<div class="row">
+		<div class="jumbotron">
+
+			<h1 class="text-center">jCountdown</h1>
+
+			<p>Server Time Offset Demo</p>
+
+
+			<p>
+				This demo shows you how to get the countdown timer to match the server time offset to the plugin.
+			</p>
+
+			<div id="timer" class="text-center"></div>
+
+		</div>
+
+
+
+
+		<h2>Setup</h2>
+
+		<p>Setup is as simple as doing the following:</p>
+
+<pre>
+//HTML
+
+&lt;p id="timer"&gt;&lt;/p&gt;
+</pre>
+
+<pre>
+// JavaScript
+var dateTo = "January 21, 2013 12:00:00";
+
+$("#time").countdown({
+	date: dateTo,
+	offset: -8
+});
+</pre>
+
+
+	</div>
+
+</div>
+
+</body>
+</html>

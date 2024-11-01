@@ -1,0 +1,201 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: them.es Plus v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-02-02 09:17:44+0000\n"
+"Last-Translator: them-es <themes@klicc.at>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: \n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: inc/contactform.php:15
+#@ themes-plus
+msgid "All fields are required!"
+msgstr "Alle Felder werden benötigt!"
+
+#: inc/contactform.php:21
+#@ themes-plus
+msgid "Please check your Email address!"
+msgstr "Bitte überprüfen Sie Ihre E-Mail-Adresse!"
+
+#: inc/contactform.php:28
+#@ themes-plus
+msgid "Please enter your name!"
+msgstr "Bitte geben Sie Ihren Namen ein!"
+
+#: inc/contactform.php:35
+#: inc/contactform.php:70
+#: inc/contactform.php:72
+#@ themes-plus
+msgid "Name"
+msgstr ""
+
+#: inc/contactform.php:36
+#: inc/contactform.php:77
+#: inc/contactform.php:79
+#@ themes-plus
+msgid "Email"
+msgstr "E-Mail"
+
+#: inc/contactform.php:37
+#: inc/contactform.php:84
+#: inc/contactform.php:86
+#@ themes-plus
+msgid "Message"
+msgstr "Nachricht"
+
+#: inc/contactform.php:61
+#@ themes-plus
+msgid "Thanks, "
+msgstr "Danke, "
+
+#: inc/contactform.php:61
+#@ themes-plus
+msgid "Your Email was successfully sent!"
+msgstr "Ihre Nachricht wurde gesendet!"
+
+#: inc/contactform.php:63
+#@ themes-plus
+msgid "There was an error sending your Email!"
+msgstr "Fehler beim Senden der Nachricht!"
+
+#: inc/contactform.php:94
+#@ themes-plus
+msgid "Send a copy of this Email to yourself"
+msgstr "Eine Kopie dieser Nachricht erhalten"
+
+#: inc/contactform.php:103
+#@ themes-plus
+msgid "Send"
+msgstr "Senden"
+
+#: inc/gallery_mod.php:8
+#@ themes-plus
+msgid "Type"
+msgstr "Typ"
+
+#: inc/gallery_mod.php:10
+#@ themes-plus
+msgid "Default"
+msgstr "Standard"
+
+#: inc/gallery_mod.php:11
+#@ themes-plus
+msgid "Grid"
+msgstr ""
+
+#: inc/gallery_mod.php:12
+#@ themes-plus
+msgid "Grid Stacked (9 items)"
+msgstr ""
+
+#: inc/gallery_mod.php:13
+#@ themes-plus
+msgid "Carousel"
+msgstr ""
+
+#: inc/gallery_mod.php:14
+#@ themes-plus
+msgid "PanZoom"
+msgstr ""
+
+#: inc/map.php:40
+#@ themes-plus
+msgid "Lat/Lng undefined. Please add the coordinates in the Page Settings!"
+msgstr "Lat/Lng nicht definiert. Bitte geben Sie die Koordinaten in den Seiten Einstellungen ein!"
+
+#: themes-plus.php:143
+#: themes-plus.php:198
+#@ themes-plus
+msgid "Error"
+msgstr "Fehler"
+
+#: themes-plus.php:249
+#, php-format
+#@ themes-plus
+msgid "Permalink to %s"
+msgstr "Permalink zu %s"
+
+#: themes-plus.php:240
+#@ themes-plus
+msgid "Recent Posts"
+msgstr "Aktuelle Einträge"
+
+#: inc/gallery_mod.php:348
+#@ themes-plus
+msgid "All"
+msgstr "Alle"
+
+#: inc/gallery_mod.php:288
+#@ themes-plus
+msgid "more"
+msgstr "mehr"
+
+#: inc/gallery_mod.php:15
+#@ themes-plus
+msgid "Portfolio Filter"
+msgstr ""
+
+#: themes-plus.php:77
+#@ themes-plus
+msgid "Weblink"
+msgstr ""
+
+#: inc/map.php:36
+#@ themes-plus
+msgid "Map"
+msgstr "Karte"
+
+#: shortcake-plugin/inc/class-shortcode-ui.php:82
+#: shortcake-plugin/inc/class-shortcode-ui.php:83
+#@ shortcode-ui
+msgid "Insert Post Element"
+msgstr ""
+
+#: shortcake-plugin/inc/class-shortcode-ui.php:84
+#@ shortcode-ui
+msgid "Post Element Details"
+msgstr ""
+
+#: shortcake-plugin/inc/class-shortcode-ui.php:85
+#@ shortcode-ui
+msgid "Insert Element"
+msgstr ""
+
+#: shortcake-plugin/inc/class-shortcode-ui.php:86
+#@ shortcode-ui
+msgid "Update"
+msgstr ""
+
+#: shortcake-plugin/inc/class-shortcode-ui.php:87
+#@ shortcode-ui
+msgid "Edit"
+msgstr ""
+
+#: shortcake-plugin/inc/class-shortcode-ui.php:88
+#@ shortcode-ui
+msgid "Preview"
+msgstr ""
+
+#: shortcake-plugin/inc/class-shortcode-ui.php:151
+#@ shortcode-ui
+msgid "Something's rotten in the state of Denmark"
+msgstr ""
+
+#: shortcake-plugin/inc/templates/edit-form.tpl.php:3
+#@ shortcode-ui
+msgid "Back to list"
+msgstr ""
+
